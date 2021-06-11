@@ -1,0 +1,356 @@
+# These are my easy quiz questions 
+
+question_e_1 = """How many innings are there in a MLB game?
+
+A) 9
+B) 7
+C) 8
+D) There is a time limit"""
+
+question_e_2 = """In the MLB there are two leagues called the American League and National League
+
+T) True
+F) False"""
+
+question_e_3 = """There is a designated hitter in the National League
+
+T) True
+F) False"""
+
+question_e_4 = """When only one pitcher pitches the whole game, what is it called?
+
+A) No hitter 
+B) Complete game
+C) Perfect game
+D) Starting pitcher"""
+
+question_e_5 = """How many different positions are there?
+
+A) 9
+B) 10
+C) 8
+D) 7"""
+
+
+# These are my medium quiz questions 
+
+question_m_1 = """Which of these ball parks was NOT located in New York?
+
+A) The Polo Grounds 
+B) Ebbets Field
+C) Yankee Stadium 
+D) Fenway Park"""
+
+question_m_2 = """How many World Series Championships have the New York Yankees won?
+
+A) 27
+B) 16
+C) 25
+D) 28"""
+
+question_m_3 = """What player is nicknamed Mr. November? 
+
+A) Derek Jeter 
+B) David Ortiz
+C) Mariano Rivera
+D) Reggie Jackson"""
+
+question_m_4 = """Albert Pujols currently is in 5th place in the all time home run leaders list. 
+His MLB debut was in 2001- 
+He played with the St. Louis Cardinals for 11 years and the Los Angeles Angels for 10 years.
+He just recently got traded to what team for the rest of the 2021 season?
+
+A) Cardinals
+B) Giants
+C) Brewers
+D) Dodgers"""
+
+question_m_5 = """What number in the lineup is called the 'clean up hitter'
+
+A) 1
+B) 2
+C) 3
+D) 4"""
+
+
+# These are my hard quiz questions 
+
+question_h_1 = """Who stole home plate against the Yankees in Game 1 of the 1955 World Series?
+
+A) Gil Hodges
+B) Jackie Robinson
+C) Pee Wee Reese
+D) Sandy Amoros"""
+ 
+question_h_2 = """Who won the first ever World Series Most Valuable Player Award given to any player in 1955?
+
+A) Mickey Mantle
+B) Don Newcombe
+C) Johnny Podres
+D) Willie Mays"""
+
+
+question_h_3 = """Which Red Sox Hall of Famer's career was interupted by serving in the US Navy 
+and Marine Corps for WWII and the Korean War?
+
+A) Ted Williams 
+B) Joe DiMaggio
+C) Stan Musial 
+D) Bob Elliot"""
+
+
+question_h_4 = """The 2002 Oakland A's had a historic regular season, winning 103 games and securing 1st in the AL West.
+There was even a movie made about them starring Brad Pitt and Jonah Hill...
+How many games in a row did they win during the regular season?
+
+A) 11
+B) 14
+C) 22
+D) 20"""
+
+question_h_5 = """The 'Miracle Mets' was the nickname for the Mets team in their eigth season as a Major League team.
+It was a great accomplishment because the previous seven seasons they never had a winning record. 
+They ended up winning 100 games this year and won the World Series against the Baltimore Orioles. 
+What year was this? 
+
+A) 1969
+B) 1972
+C) 1980
+D) 1965"""
+
+question_h_6 = """The Houston Astros won the World Series in 2017. 
+Two years later, we find out they were cheating the whole season by using cameras and banging on trash cans.
+Jose Altuve won AL MVP that year, and a player on the New York Yankees was 2nd in MVP voting.
+Who was it? 
+
+A) Giancarlo Stanton
+B) CC Sabathia 
+C) Aaron Judge
+D) Gary Sanchez"""
+
+
+question_h_7 = """What Major League Pitcher has won the most Cy Young Awards?
+
+A) Roy Halladay
+B) Greg Maddux 
+C) Randy Johnson
+D) Roger Clemens"""
+
+
+# Answers for easy quiz 
+question_e_dict = {question_e_1: ['A', 'a'], question_e_2: ['T', 't', 'True', 'true'],
+                 question_e_3: ['F', 'f', 'False', 'false'], question_e_4: ['B', 'b'], 
+                 question_e_5: ['A', 'a']}
+
+# Answers for medium quiz
+question_m_dict = {question_m_1: ['D', 'd'], question_m_2: ['A', 'a'],
+                 question_m_3: ['A', 'a'], question_m_4: ['D', 'd'], 
+                 question_m_5: ['D', 'd']}
+
+# Answers for hard quiz 
+question_h_dict = {question_h_1: ['B', 'b'], question_h_2: ['C', 'c'],
+                 question_h_3: ['A', 'a'], question_h_4: ['D', 'd'], 
+                 question_h_5: ['A', 'a'], question_h_6: ['C', 'c'], 
+                 question_h_7: ['D', 'd']}
+
+def play_quiz():
+    
+    """This funciton takes the user name as input and plays the quiz associated with the input"""
+    
+    name = input("""Enter your name """)
+
+    print("How well do you know baseball, " + name + '? '"Let's find out!")
+    
+    # This asks the user what level they want to play
+    
+    level = input("""What level would you like to attempt? Please input the letter of the level you want to attempt
+
+    A) Easy
+    B) Medium
+    C) Hard
+    """)
+             
+    if level == 'A' or level == 'a':
+        play_e_quiz()
+    if level == 'B' or level == 'b':
+        play_m_quiz()
+    if level == 'C' or level == 'c':
+        play_h_quiz()
+
+
+def repeat():
+    
+    """This function asks the user if they would like to attempt the quiz again"""
+    
+    output = input("""Would you like to try again? Please input the letter of the level you want to play
+
+    A) Easy
+    B) Medium
+    C) Hard
+    D) Nah, man I've had enough. It's 75 and sunny outside, I am going surfing
+    """)
+    
+    if output == 'A' or output == 'a':
+        play_e_quiz()
+    if output == 'B' or output == 'b':
+        play_m_quiz()
+    if output == 'C' or output == 'c':
+        play_h_quiz()
+    else: 
+        print('Yeeewwww see ya later. Thanks for playing.')
+        
+         
+def play_e_quiz():
+    
+    """This function loops through the easy quiz dictionary and asks the question,
+    and if the input matches the key in the dictionary, then the user gets 1 point"""
+     
+    score = 0
+
+    for q in question_e_dict:
+        print(q)
+        answer = input("What is the answer? Please input the letter of the answer that you think is correct ")
+
+        if answer in question_e_dict[q]:
+            print("""
+            Correct!
+            """)
+            score = score + 1
+
+        else:
+            print("""
+                Nah, Sorry!
+                """)
+
+    print("The end! You got ", score, " correct out of 5")   
+
+    # For each score, the user gets a witty response 
+    if score == 0:
+        print("Well, I really hope you look up these answers and try again. Don't feel defeated just yet!")
+    if score == 1:
+        print("Not too bad, but baseball is my favorite sport and if you don't try again I'll be upset.")
+    if score == 2:
+        print("""In baseball if you get 2 hits out of 5 you are hitting a .400 batting average which is ALL STAR level! 
+        However, 2 out of 5 on a quiz, is not! HAHA""")
+    if score == 3: 
+        print("""My favorite number is 3. But getting 3 out of 5 is still 2 away from 100% ;) Try again!""")
+    if score == 4:
+        print("""In baseball the fourth batter is the 'clean up hitter'. 
+        Still one away from 100%...""")
+    if score == 5:
+        print("""CONGRATS!! You have mastered easy level baseball...
+        well, enough to get 100% on my quiz. Try the next level!""")             
+
+    # Call repeat function  
+    repeat()
+
+            
+def play_m_quiz():
+    
+    """This function loops through the medium quiz dictionary and asks the question,
+    and if the input matches the key in the dictionary, then the user gets 1 point"""
+
+    score = 0
+
+    for q in question_m_dict:
+        print(q)
+        answer = input("What is the answer? Please input the letter of the answer that you think is correct ")
+
+        if answer in question_m_dict[q]:
+            print("""
+            Correct!
+            """)
+            score = score + 1
+
+        else:
+            print("""
+            Nah, Sorry!
+            """)
+
+    print("The end! You got ", score, " correct out of 5")
+
+
+    # For each score, the user gets a witty response 
+    if score == 0:
+        print("Well, I really hope you look up these answers and try again. That is embarrasing.")
+    if score == 1:
+        print("Not too bad, but baseball is my favorite sport and if you don't try again I'll be upset.")
+    if score == 2:
+        print("""In baseball if you get 2 hits out of 5 you are hitting a .400 batting average which is ALL STAR Level! 
+              However, 2 out of 5 on a quiz, is not! HAHA""")
+    if score == 3: 
+        print("""My favorite number is 3. But getting 3 out of 5 is still 2 away from 100% ;) Try again!""")
+    if score == 4:
+        print("""In baseball the fourth batter is the 'clean up hitter'. 
+              Still one away...""")
+    if score == 5:
+        print("""CONGRATS!! You have mastered medium level baseball...
+            well, enough to get 100% on my quiz. Try the next level... if you dare.""" " You got it!")             
+    
+    # Call repeat function    
+    repeat()       
+            
+
+            
+def play_h_quiz():
+    
+    """This function loops through the hard quiz dictionary and asks the question,
+    and if the input matches the key in the dictionary, then the user gets 1 point"""
+  
+    score = 0              
+
+    for q in question_h_dict:
+        print(q)
+        answer = input("What is the answer? Please input the letter of the answer that you think is correct ")
+
+        if answer in question_h_dict[q]:
+            print("""
+            Correct!
+            """)
+
+            score = score + 1
+
+        else:
+            print("""
+            Nah, Sorry!
+            """)
+
+
+    print("The end! You got " , score , " correct out of 7")
+
+    # For each score, the user gets a witty response 
+    
+    if score == 0:
+        print("Well, I really hope you look up these answers and try again. That is embarrasing.")
+    if score == 1:
+        print("Not too bad, but baseball is my favorite sport and if you don't try again I'll be upset.")
+    if score == 2:
+        print("""In baseball if you get 2 hits out of 7 you are hitting a .285 batting average which is quite good! 
+            However, 2 out of 7 on a quiz, is not! HAHA""")
+    if score == 3: 
+        print("""My favorite number is 3. But getting 3 out of 7 is not what you want ;) Try again!""")
+    if score == 4:
+        print("""In baseball the fourth batter is the 'clean up hitter'. 
+            But you are not hitting, you just failed a quiz LOL""")
+    if score == 5:
+        print("""Getting a 71% is actually not bad. This is a hard quiz. Though, I think you should try again.""")
+    if score == 6: 
+        print("""Wow! I wonder which one you got wrong... You are close...was it the one about the 2017 AL MVP or 
+            the Most CY Young Awards?""")
+    if score == 7:
+        print("""CONGRATS!! You have mastered hard level baseball history...
+            well enough to get 100% on my quiz.""" " Congrats!")             
+
+   
+    # Call repeat function     
+    repeat()
+            
+
+            
+            
+            
+            
+            
+            
+            
+          
